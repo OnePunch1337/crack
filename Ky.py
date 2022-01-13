@@ -1,4 +1,3 @@
-# ./RipkiAR1337
 # -*- coding: utf-8 -*-
 import os,re,sys,json,time,random,requests
 from concurrent.futures import ThreadPoolExecutor
@@ -27,18 +26,17 @@ P = ('\x1b[1;97m')
 
 # Logo
 ___logo___ = ("""%s __  __ ____  _____
-|  \/  | __ )|  ___|%s {au:./RipkiAR1337}
-%s| |\/| |  _ \| |_%s    {ig:@Ripkiarismawandi_}
-%s| |  | | |_) |  _|%s   {gh:github.com/OnePunch1337}
-%s|_|  |_|____/|_|%s     {fb:fb.com/ikkii.we}
+|  \/  | __ )|  ___|%s {au:ilyasaputra}
+%s| |\/| |  _ \| |_%s    {ig:@IlyaziLLusion}
+%s| |  | | |_) |  _|%s   {gh:github.com/ilyasxyz}
+%s|_|  |_|____/|_|%s     {fb:fb.com/ilyaz.xenemy.anti.perudal}
 """%(M,P,M,P,U,P,U,P))
 # Proxy
 try:
-__res = requests.get('https://api.proxyscrape.com/v2/?request=displayproxies&protocol=socks4&timeout=10000&country=all&ssl=all&anonymity=all').text
-    open('Data/proxy.txt','w').write(__res)
-excepte:
-    ___sep = requests.get('https://raw.githubusercontent.com/RozhakXD/Premium/main/Data/proxy3.txt').text
-    open('Data/proxy.txt','w').write(___sep)
+    ___res = requests.get('https://raw.githubusercontent.com/RozhakXD/Premium/main/Data/proxy.txt').text
+    open('Data/proxy.txt','w').write(___res)
+except:
+    exit("%s[%s!%s]%s Proxy Error"%(P,M,P,M))
 # Requests Session
 ses = Session()
 # Login Cookie
@@ -80,7 +78,7 @@ def ___cookies___():
         ___login___()
     try:
         ___cok = ___cookie___.split('sessionid=')[1]; ___kuki = ___cok.split(';')[0]
-        ___teks = random.choice(['Hallo Bwang','Sudah coli kah?','Kalo belum coli dlu bang','Udah?','Oke kita lanjut bang','Salken bang Ane ./RipkiAR1337'])
+        ___teks = random.choice(['Hallo Bang 😍','Hai Bang Apa Kabar 😎','Izin Pake Scriptnya 😁','Mantap Bang 😘','Programmer Bang 🤔','Salam Kenal Bang 🤗'])
         ____head = {'accept': '*/*','accept-encoding': 'gzip, deflate, br','accept-language': 'en-US,en;q=0.9','content-length': '0','content-type': 'application/x-www-form-urlencoded','cookie': 'ig_did=F839D900-5ECC-4392-BCAD-5CBD51FB9228; mid=YChlyQALAAHp2POOp2lK_-ciAGlM; ig_nrcb=1; csrftoken=W4fsZmCjUjFms6XmKl1OAjg8v81jZt3r; ds_user_id=45872034997; sessionid='+___kuki,'origin': 'https://www.instagram.com','referer': 'https://www.instagram.com/','sec-fetch-dest': 'empty','sec-fetch-mode': 'cors','sec-fetch-site': 'same-origin','user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.182 Safari/537.36','x-csrftoken': 'W4fsZmCjUjFms6XmKl1OAjg8v81jZt3r','x-ig-app-id': '5398218083','x-ig-www-claim': 'hmac.AR0OQY4Gw4kczWNvfVOhvoljSINqB2u2gB-utUQ1MF0Mkrzu','x-instagram-ajax': '95bfef5dd816','x-requested-with': 'XMLHttpRequest'}
         ___data = {'comment_text': ___teks,'replied_to_comment_id':''}
         ___rex = ses.post('https://www.instagram.com/web/likes/2734317205115382629/like/',headers=____head).text
