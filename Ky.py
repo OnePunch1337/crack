@@ -34,8 +34,11 @@ ___logo___ = ("""%s __  __ ____  _____
 """%(M,P,M,P,U,P,U,P))
 # Proxy
 try:
-    ___res = requests.get('https://raw.githubusercontent.com/RozhakXD/Premium/main/Data/proxy3.txt').text
-    open('Data/proxy.txt','w').write(___res)
+__res = requests.get('https://api.proxyscrape.com/v2/?request=displayproxies&protocol=socks4&timeout=10000&country=all&ssl=all&anonymity=all').text
+    open('Data/proxy.txt','w').write(__res)
+excepte:
+    ___sep = requests.get('https://raw.githubusercontent.com/RozhakXD/Premium/main/Data/proxy3.txt').text
+    open('Data/proxy.txt','w').write(___sep)
 # Requests Session
 ses = Session()
 # Login Cookie
